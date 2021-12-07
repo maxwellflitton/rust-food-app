@@ -1,0 +1,54 @@
+NAME: "matter paneer"
+TYPE: "curry"
+COUNTRY: "Indian"
+DINNER_TYPE:
+  - "dinner"
+  - "lunch"
+INGREDIENTS:
+  - NAME: "salt"
+    AMOUNT: 0.25
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "tomato puree"
+    AMOUNT: 30
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garam masala"
+    AMOUNT: 0.3
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "cumin"
+    AMOUNT: 0.25
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "paneer"
+    AMOUNT: 200
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "double cream"
+    AMOUNT: 75
+    MEASUREMENT_TYPE: "ml"
+OTHER_RECIPES:
+  - NAME: "onion tomato masala"
+    AMOUNT: 300
+    MEASUREMENT_TYPE: "grams"
+STEPS:
+  - TIME: 10
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "salt"
+      - "tomato puree"
+      - "garam masala"
+      - "cumin"
+      - "onion tomato masala"
+    INSTRUCTION: "cook ingredients in pan for 10 minutes"
+  - TIME: 5
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+    INSTRUCTION: "add 120ml of water to pot and simmer for 5 minutes"
+  - TIME: 10
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "paneer"
+    INSTRUCTION: "cut the paneer into cubes and cook in pan for 10 minutes"
+  - TIME: 0
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "double cream"
+    INSTRUCTION: "add 75ml of double cream and serve"
