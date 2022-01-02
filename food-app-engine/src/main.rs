@@ -56,6 +56,7 @@ fn main() {
     let ingredients_map = IngredientsShopMap::new(measurements, ingredients);
     let ingredients_map = load_recipe_list(String::from("beyond_meat_burger"), ingredients_map);
     let ingredients_map = load_recipe_list(String::from("matter_paneer"), ingredients_map);
+    let ingredients_map = load_recipe_list(String::from("black_daal"), ingredients_map);
 
     for (key, value) in &ingredients_map.amount_map {
         println!("{} : {} {}", key, value.amount, value.measurement);

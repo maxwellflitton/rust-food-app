@@ -1,0 +1,81 @@
+NAME: "black daal"
+TYPE: "curry"
+COUNTRY: "Indian"
+DINNER_TYPE:
+  - "dinner"
+  - "lunch"
+INGREDIENTS:
+  - NAME: "whole black urad daal"
+    AMOUNT: 300
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garlic paste"
+    AMOUNT: 30
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garam masala"
+    AMOUNT: 12
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "ginger paste"
+    AMOUNT: 10
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "tomato puree"
+    AMOUNT: 70
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "salt"
+    AMOUNT: 1.33
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "chilli powder"
+    AMOUNT: 0.66
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "garam masala"
+    AMOUNT: 0.33
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "butter"
+    AMOUNT: 90
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "double cream"
+    AMOUNT: 90
+    MEASUREMENT_TYPE: "ml"
+STEPS:
+  - TIME: 1
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "whole black urad daal"
+    INSTRUCTION: "wash the daal until it's clean in fresh water"
+  - TIME: 180
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+      - "whole black urad daal"
+    INSTRUCTION: "boil the daal in the water to soften it up (top up if needed as the daal needs to be covered)"
+  - TIME: 15
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+      - "whole black urad daal"
+    INSTRUCTION: "let the daal sit to cool down"
+  - TIME: 1
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+      - "whole black urad daal"
+    INSTRUCTION: "swap the water with clean water"
+  - TIME: 30
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "garlic paste"
+      - "ginger paste"
+      - "tomato puree"
+      - "salt"
+      - "chilli powder"
+      - "garam masala"
+    INSTRUCTION: "add ingredients to the curry and cook"
+  - TIME: 90
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+    INSTRUCTION: "keep cooking topping up with water"
+  - TIME: 15
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "double cream"
+    INSTRUCTION: "once cream is added it's ready to serve after 15 minutes"
