@@ -1,0 +1,76 @@
+NAME: "slow cooked cauliflower pancetta pasta"
+TYPE: "italian"
+COUNTRY: "Italy"
+DINNER_TYPE:
+  - "dinner"
+  - "lunch"
+INGREDIENTS:
+  - NAME: "cauliflower"
+    AMOUNT: 1000
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "onion"
+    AMOUNT: 285
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "olive oil"
+    AMOUNT: 15
+    MEASUREMENT_TYPE: "ml"
+  - NAME: "pancetta"
+    AMOUNT: 200
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "tomato puree"
+    AMOUNT: 17
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "pasta"
+    AMOUNT: 500
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "parmesan cheese"
+    AMOUNT: 60
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "butter"
+    AMOUNT: 60
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "vegetable stock cube"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+  - NAME: "salt"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "pepper"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+STEPS:
+  - TIME: 8
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "onion"
+      - "olive oil"
+    INSTRUCTION: "sweat onions in a pan"
+  - TIME: 6
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "pancetta"
+    INSTRUCTION: "add pancetta to pan and cook"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "cauliflower"
+    INSTRUCTION: "add cauliflower to the pan and cook"
+  - TIME: 60
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "water"
+      - "vegetable stock cube"
+      - "salt"
+    INSTRUCTION: "add 3 litres of water and ingredients to pan, cover and cook for an hour"
+  - TIME: 40
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "tomato puree"
+    INSTRUCTION: "top up water and simmer"
+  - TIME: 5
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "butter"
+      - "parmesan cheese"
+    INSTRUCTION: "stir in ingredients and rest for 5 minutes"
+
