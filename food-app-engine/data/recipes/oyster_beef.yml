@@ -1,0 +1,95 @@
+NAME: "oyster beef"
+TYPE: "stir fry"
+COUNTRY: "China"
+DINNER_TYPE:
+  - "dinner"
+  - "lunch"
+INGREDIENTS:
+  - NAME: "vegetable oil"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tbs"
+  - NAME: "sirloin beef"
+    AMOUNT: 300
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garlic"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "ginger"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tbs"
+  - NAME: "potato flour"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tbs"
+  - NAME: "mushroom"
+    AMOUNT: 100
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "green pepper"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+  - NAME: "onion"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+  - NAME: "spring onion"
+    AMOUNT: 50
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "oyster sauce"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "tbs"
+  - NAME: "soy sauce"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tbs"
+  - NAME: "honey"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "sesame oil"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "shaoxing rice wine"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tbs"
+STEPS:
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "sirloin beef"
+      - "potato flour"
+    INSTRUCTION: "coat raw beef slices in potato flour"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "garlic"
+      - "ginger"
+      - "vegetable oil"
+    INSTRUCTION: "fry garlic and ginger in vegetable oil"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "sirloin beef"
+      - "potato flour"
+      - "shaoxing rice wine"
+    INSTRUCTION: "add beef slices and shaoxhing rice wine to garlic and ginger mix, cook and remove from pan"
+  - TIME: 4
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "onions"
+    INSTRUCTION: "fry onions"
+  - TIME: 4
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "mushroom"
+      - "green pepper"
+      - "soy sauce"
+      - "oyster sauce"
+      - "honey"
+    INSTRUCTION: "add mushrooms, green pepper and sauces to onion mix"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "sirloin beef"
+    INSTRUCTION: "add beef back into pan and stir"
+  - TIME: 1
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "spring onion"
+      - "sesame oil"
+    INSTRUCTION: "add spring onion and sesame oil into pan and mix all altogether"
