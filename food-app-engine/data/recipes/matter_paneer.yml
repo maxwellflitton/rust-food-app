@@ -24,7 +24,7 @@ INGREDIENTS:
     AMOUNT: 75
     MEASUREMENT_TYPE: "ml"
 OTHER_RECIPES:
-  - NAME: "onion tomato masala"
+  - NAME: "onion_tomato_masala"
     AMOUNT: 300
     MEASUREMENT_TYPE: "grams"
 STEPS:
@@ -35,7 +35,7 @@ STEPS:
       - "tomato puree"
       - "garam masala"
       - "cumin"
-      - "onion tomato masala"
+      - "onion_tomato_masala"
     INSTRUCTION: "cook ingredients in pan for 10 minutes"
   - TIME: 5
     TIME_TYPE: "minutes"

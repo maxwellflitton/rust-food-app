@@ -15,8 +15,8 @@ INGREDIENTS:
     AMOUNT: 2
     MEASUREMENT_TYPE: "count"
   - NAME: "onion"
-    AMOUNT: 1
-    MEASUREMENT_TYPE: "count"
+    AMOUNT: 170
+    MEASUREMENT_TYPE: "grams"
 STEPS:
   - TIME: 5
     TIME_TYPE: "minutes"

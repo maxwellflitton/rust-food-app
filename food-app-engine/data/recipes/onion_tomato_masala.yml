@@ -1,0 +1,55 @@
+NAME: "onion tomato masala"
+TYPE: "curry"
+COUNTRY: "Indian"
+DINNER_TYPE:
+  - "base"
+INGREDIENTS:
+  - NAME: "vegetable oil"
+    AMOUNT: 300
+    MEASUREMENT_TYPE: "ml"
+  - NAME: "onion"
+    AMOUNT: 1200
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garlic paste"
+    AMOUNT: 35
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "ginger paste"
+    AMOUNT: 30
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "chilli powder"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "tomato puree"
+    AMOUNT: 30
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "salt"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "chopped tomatoes"
+    AMOUNT: 600
+    MEASUREMENT_TYPE: "grams"
+STEPS:
+  - TIME: 40
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "onion"
+      - "vegetable oil"
+    INSTRUCTION: "cook onions in oil until they start to brown"
+  - TIME: 3
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "garlic paste"
+      - "ginger paste"
+    INSTRUCTION: "add the pastes and sweat but do not burn"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "chilli powder"
+      - "tomato puree"
+      - "salt"
+    INSTRUCTION: "add ingredients and cook for another 2 minutes"
+  - TIME: 20
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "chopped tomatoes"
+    INSTRUCTION: "add tomatoes and once cooked can use as base or jar"
