@@ -6,12 +6,14 @@ use std::collections::HashMap;
 /// # Attributes
 /// - amount (f32): the amount of ingredient needed
 /// - measurement (String): the type measurement needed for the ingredient
+#[derive(Debug, Clone)]
 pub struct IngredientMeasurement {
     pub amount: f32,
     pub measurement: String
 }
 
 
+#[derive(Debug, Clone)]
 pub struct IngredientsShopMap {
     pub amount_map: HashMap<String, IngredientMeasurement>,
     pub allowed_measurements: Vec<String>,
@@ -29,7 +31,7 @@ impl IngredientsShopMap {
         }
     }
 
-    fn insert_ingredient(mut self, name: String, amount: f32, measurement: String) -> Self {
+    pub fn insert_ingredient(mut self, name: String, amount: f32, measurement: String) -> Self {
 
         if self.allowed_ingredients.contains(&name) && self.allowed_measurements.contains(&measurement) {
             
@@ -51,5 +53,4 @@ impl IngredientsShopMap {
             panic!("ingredient {} or measurement {} was not allowed", name, measurement);
         }
     }
-
 }

@@ -1,0 +1,36 @@
+NAME: "beyond meat burger"
+TYPE: "american"
+COUNTRY: "America"
+DINNER_TYPE:
+  - "dinner"
+  - "lunch"
+INGREDIENTS:
+  - NAME: "beyond meat burger"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "bread buns"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "cheese slice"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "onion"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+STEPS:
+  - TIME: 5
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "beyond meat burger"
+      - "onion"
+    INSTRUCTION: "cook ingredients in pan for 5 minutes (burgers one side)"
+  - TIME: 3
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "none"
+    INSTRUCTION: "flip burgers over and cook"
+  - TIME: 2
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "cheese slice"
+    INSTRUCTION: "place cheese slice on top of each burger and continue to cook"
