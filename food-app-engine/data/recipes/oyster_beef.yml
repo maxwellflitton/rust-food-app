@@ -7,7 +7,7 @@ DINNER_TYPE:
 INGREDIENTS:
   - NAME: "vegetable oil"
     AMOUNT: 1
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
   - NAME: "sirloin beef"
     AMOUNT: 300
     MEASUREMENT_TYPE: "grams"
@@ -16,10 +16,10 @@ INGREDIENTS:
     MEASUREMENT_TYPE: "tsp"
   - NAME: "ginger"
     AMOUNT: 1
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
   - NAME: "potato flour"
     AMOUNT: 1
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
   - NAME: "mushroom"
     AMOUNT: 100
     MEASUREMENT_TYPE: "grams"
@@ -34,10 +34,10 @@ INGREDIENTS:
     MEASUREMENT_TYPE: "grams"
   - NAME: "oyster sauce"
     AMOUNT: 2
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
   - NAME: "soy sauce"
     AMOUNT: 1
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
   - NAME: "honey"
     AMOUNT: 1
     MEASUREMENT_TYPE: "tsp"
@@ -46,7 +46,7 @@ INGREDIENTS:
     MEASUREMENT_TYPE: "tsp"
   - NAME: "shaoxing rice wine"
     AMOUNT: 1
-    MEASUREMENT_TYPE: "tbs"
+    MEASUREMENT_TYPE: "tblsp"
 STEPS:
   - TIME: 2
     TIME_TYPE: "minutes"
