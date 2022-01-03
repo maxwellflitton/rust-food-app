@@ -1,64 +1,86 @@
-use serde_yaml;
-use std::collections::BTreeMap;
+#![feature(proc_macro_hygiene, decl_macro)]
+
+#[macro_use] extern crate rocket;
+use ingredients::processes::get_recipes;
+use rocket_contrib::json::Json;
+use serde::{Deserialize, Serialize};
+
+use rocket::http::Method;
+use rocket_cors::{AllowedOrigins, CorsOptions};
 
 mod ingredients;
 use ingredients::ingredients_map::IngredientsShopMap;
+use ingredients::processes::{load_meta_data, load_recipe_list};
 
 
-fn load_meta_data(file: &str) -> Vec<String> {
-    let file = std::fs::File::open(format!("./data/{}.yml", file)).unwrap();
-    let map: BTreeMap<String, serde_yaml::Value> = serde_yaml::from_reader(file).unwrap();
-    return map.get("ACCEPTED_TYPES").unwrap().as_sequence().unwrap().iter().map(|x| String::from(x.as_str().unwrap())).collect();
+#[get("/hello/<name>/<age>")]
+fn hello(name: String, age: u8) -> String {
+    format!("Hello, {} year old named {}!", age, name)
 }
 
 
-fn load_recipe_list(recipe: String, mut ingredients_map: IngredientsShopMap) -> IngredientsShopMap {
-    let recipe_file = std::fs::File::open(format!("./data/recipes/{}.yml", recipe)).unwrap();
-    let recipe_map: BTreeMap<String, serde_yaml::Value> = serde_yaml::from_reader(recipe_file).unwrap();
+#[derive(Serialize, Deserialize)]
+pub struct RecipesResponse {
+    pub recipes: Vec<String>
+}
 
-    let ingredients: &Vec<serde_yaml::Value> = recipe_map.get("INGREDIENTS").unwrap().as_sequence().unwrap();
 
-    for ingredient in ingredients {
+#[get("/get/all")]
+fn get_all_recipes() -> Json<RecipesResponse> {
+    let mut test = Vec::new();
+    test.push(String::from("one"));
+    let outcome = RecipesResponse{recipes: get_recipes()};
+    return Json(outcome)
+}
 
-        let map = ingredient.as_mapping().unwrap();
-        let name = String::from(map.get(&serde_yaml::Value::from("NAME")).unwrap().as_str().unwrap());
-        let amount = map.get(&serde_yaml::Value::from("AMOUNT")).unwrap().as_f64().unwrap() as f32;
-        let measurement = String::from(map.get(&serde_yaml::Value::from("MEASUREMENT_TYPE")).unwrap().as_str().unwrap());
+#[post("/create/shopping", data="<recipes>", format = "json")]
+fn create_shopping(recipes: Json<RecipesResponse>) -> Json<RecipesResponse> {
+    let measurements = load_meta_data("measurement_types");
+    let ingredients = load_meta_data("ingredient_types");
+    let mut map = IngredientsShopMap::new(measurements, ingredients);
 
-        ingredients_map = ingredients_map.to_owned().insert_ingredient(name, amount, measurement);
+    for i in recipes.into_inner().recipes {
+        map = load_recipe_list(i, map);
     }
 
-    // TODO => this is mapping other recipies attached to the recipe
-    match recipe_map.get("OTHER_RECIPES") {
-        Some(data) => {
-            let other_recipes = data.as_sequence().unwrap();
-            for recipe in other_recipes {
-                let name = recipe.as_mapping().unwrap().get(&serde_yaml::Value::from("NAME")).unwrap().as_str().unwrap();
-                ingredients_map = load_recipe_list(String::from(name), ingredients_map);
-            }
-        }
-        None => {}
+    let mut buffer = Vec::new();
+
+    for (key, value) in &map.amount_map {
+        let amount = format!("{} : {} {}", key, value.amount, value.measurement);
+        buffer.push(amount);
     }
 
-    return ingredients_map
-} 
+    let outcome = RecipesResponse{recipes: buffer};
+    return Json(outcome)
+}
+
 
 
 fn main() {
-    // let data = "Some data!";
-    // fs::write("./outcome.txt", data).expect("Unable to write file");
-    // TODO => Write a read file for recipies
 
-    let measurements = load_meta_data("measurement_types");
-    let ingredients = load_meta_data("ingredient_types");
+    // let measurements = load_meta_data("measurement_types");
+    // let ingredients = load_meta_data("ingredient_types");
 
 
-    let ingredients_map = IngredientsShopMap::new(measurements, ingredients);
-    let ingredients_map = load_recipe_list(String::from("beyond_meat_burger"), ingredients_map);
-    let ingredients_map = load_recipe_list(String::from("matter_paneer"), ingredients_map);
-    let ingredients_map = load_recipe_list(String::from("slow_cooked_cauliflower_pancetta_pasta"), ingredients_map);
+    // let ingredients_map = IngredientsShopMap::new(measurements, ingredients);
+    // let ingredients_map = load_recipe_list(String::from("beyond_meat_burger"), ingredients_map);
+    // let ingredients_map = load_recipe_list(String::from("matter_paneer"), ingredients_map);
+    // let ingredients_map = load_recipe_list(String::from("slow_cooked_cauliflower_pancetta_pasta"), ingredients_map);
+    // let ingredients_map = load_recipe_list(String::from("black_daal"), ingredients_map);
 
-    for (key, value) in &ingredients_map.amount_map {
-        println!("{} : {} {}", key, value.amount, value.measurement);
-    }
+
+    // for (key, value) in &ingredients_map.amount_map {
+    //     println!("{} : {} {}", key, value.amount, value.measurement);
+    // }
+    let cors = CorsOptions::default()
+    .allowed_origins(AllowedOrigins::all())
+    .allowed_methods(
+        vec![Method::Get, Method::Post, Method::Patch]
+            .into_iter()
+            .map(From::from)
+            .collect(),
+    )
+    .allow_credentials(true);
+    rocket::ignite().mount("/", routes![hello, get_all_recipes, create_shopping]).attach(cors.to_cors().unwrap()).launch();
 }
+
