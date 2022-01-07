@@ -1,0 +1,59 @@
+NAME: "katsu curry"
+TYPE: "japanese"
+COUNTRY: "Japan"
+DINNER_TYPE:
+  - "lunch"
+  - "dinner"
+INGREDIENTS:
+  - NAME: "onion"
+    AMOUNT: 110
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "ginger paste"
+    AMOUNT: 10
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garlic cloves"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "tumeric"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "mild curry powder"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "tblsp"
+  - NAME: "cornflower"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "vegetable stock"
+    AMOUNT: 300
+    MEASUREMENT_TYPE: "ml"
+  - NAME: "coconut milk"
+    AMOUNT: 100
+    MEASUREMENT_TYPE: "ml"
+  - NAME: "soy sauce"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "breaded chicken"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+  - NAME: "carrot"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+STEPS:
+  - TIME: 10
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "onion"
+      - "ginger paste"
+      - "garlic cloves"
+    INSTRUCTION: "sweat in a pan"
+  - TIME: 15
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "tumeric"
+      - "mild curry powder"
+      - "cornflower"
+      - "vegetable stock"
+      - "coconut milk"
+      - "soy sauce"
+      - "carrot"
+    INSTRUCTION: "add the rest of the sauce and simmer"

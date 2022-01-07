@@ -57,21 +57,6 @@ fn create_shopping(recipes: Json<RecipesResponse>) -> Json<RecipesResponse> {
 
 
 fn main() {
-
-    // let measurements = load_meta_data("measurement_types");
-    // let ingredients = load_meta_data("ingredient_types");
-
-
-    // let ingredients_map = IngredientsShopMap::new(measurements, ingredients);
-    // let ingredients_map = load_recipe_list(String::from("beyond_meat_burger"), ingredients_map);
-    // let ingredients_map = load_recipe_list(String::from("matter_paneer"), ingredients_map);
-    // let ingredients_map = load_recipe_list(String::from("slow_cooked_cauliflower_pancetta_pasta"), ingredients_map);
-    // let ingredients_map = load_recipe_list(String::from("black_daal"), ingredients_map);
-
-
-    // for (key, value) in &ingredients_map.amount_map {
-    //     println!("{} : {} {}", key, value.amount, value.measurement);
-    // }
     let cors = CorsOptions::default()
     .allowed_origins(AllowedOrigins::all())
     .allowed_methods(

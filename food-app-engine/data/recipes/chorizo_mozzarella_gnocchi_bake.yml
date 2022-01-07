@@ -1,0 +1,51 @@
+NAME: "chorizo mozzarella gnocchi bake"
+TYPE: "itialian"
+COUNTRY: "Italy"
+DINNER_TYPE:
+  - "lunch"
+  - "dinner"
+INGREDIENTS:
+  - NAME: "olive oil"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tblsp"
+  - NAME: "onion"
+    AMOUNT: 110
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "garlic cloves"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "chorizo"
+    AMOUNT: 120
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "chopped tomatoes"
+    AMOUNT: 800
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "fresh gnocchi"
+    AMOUNT: 600
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "mozzarella"
+    AMOUNT: 125
+    MEASUREMENT_TYPE: "grams"
+STEPS:
+  - TIME: 9
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "onion"
+      - "garlic"
+    INSTRUCTION: "cook onion and garlic in a pan"
+  - TIME: 5
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "chorizo"
+    INSTRUCTION: "add chorizo into pan and continue to cook"
+  - TIME: 8
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "chopped tomatoes"
+      - "fresh gnocchi"
+    INSTRUCTION: "add chopped tomatoes and gnocchi"
+  - TIME: 3
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "mozzarella"
+    INSTRUCTION: "mix in cheese and grill for 3 minutes"

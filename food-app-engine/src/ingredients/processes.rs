@@ -28,16 +28,16 @@ pub fn load_recipe_list(recipe: String, mut ingredients_map: IngredientsShopMap)
     }
 
     // TODO => this is mapping other recipies attached to the recipe
-    match recipe_map.get("OTHER_RECIPES") {
-        Some(data) => {
-            let other_recipes = data.as_sequence().unwrap();
-            for recipe in other_recipes {
-                let name = recipe.as_mapping().unwrap().get(&serde_yaml::Value::from("NAME")).unwrap().as_str().unwrap();
-                ingredients_map = load_recipe_list(String::from(name), ingredients_map);
-            }
-        }
-        None => {}
-    }
+    // match recipe_map.get("OTHER_RECIPES") {
+    //     Some(data) => {
+    //         let other_recipes = data.as_sequence().unwrap();
+    //         for recipe in other_recipes {
+    //             let name = recipe.as_mapping().unwrap().get(&serde_yaml::Value::from("NAME")).unwrap().as_str().unwrap();
+    //             ingredients_map = load_recipe_list(String::from(name), ingredients_map);
+    //         }
+    //     }
+    //     None => {}
+    // }
 
     return ingredients_map
 } 

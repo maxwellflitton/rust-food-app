@@ -1,0 +1,54 @@
+NAME: "banana bread"
+TYPE: "british"
+COUNTRY: "Britian"
+DINNER_TYPE:
+  - "desert"
+  - "snack"
+INGREDIENTS:
+  - NAME: "bananas"
+    AMOUNT: 2
+    MEASUREMENT_TYPE: "count"
+  - NAME: "butter"
+    AMOUNT: 76
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "baking soda"
+    AMOUNT: 0.5
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "salt"
+    AMOUNT: 5
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "sugar"
+    AMOUNT: 100
+    MEASUREMENT_TYPE: "grams"
+  - NAME: "eggs"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "count"
+  - NAME: "vanilla extract"
+    AMOUNT: 1
+    MEASUREMENT_TYPE: "tsp"
+  - NAME: "all-purpose flour"
+    AMOUNT: 205
+    MEASUREMENT_TYPE: "grams"
+STEPS:
+  - TIME: 1
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "none"
+    INSTRUCTION: "pre-heat oven to 175c"
+  - TIME: 5
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "bananas"
+      - "butter"
+      - "baking soda"
+      - "salt"
+      - "sugar"
+      - "eggs"
+      - "vanilla extract"
+      - "all-purpose flour"
+    INSTRUCTION: "mix all ingredients in bowl and then put in bread tin"
+  - TIME: 50
+    TIME_TYPE: "minutes"
+    INGREDIENTS:
+      - "none"
+    INSTRUCTION: "cook batter in 175c oven for 50-60 minutes"
