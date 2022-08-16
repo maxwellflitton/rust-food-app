@@ -6,14 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serde_yaml = "0.8.23"
-rocket = "0.4.10"
 serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
 serde = { version = "1.0", features = ["derive"] }
-rocket_cors = "0.5.0"
-
-
-[dependencies.rocket_contrib]
-version = "0.4"
-default-features = false
-features = ["json"]
