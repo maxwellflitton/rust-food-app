@@ -20,7 +20,7 @@ ACCEPTED_TYPES:
   - NAME: "cheese slice"
     LIFETIME: "short"
   - NAME: "onion"
-    LIFETIME: "medium"
+    LIFETIME: "short"
   - NAME: "vegetable oil"
     LIFETIME: "long"
   - NAME: "ginger paste"
